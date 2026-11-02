@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "parsian-api"
-version = "0.1.0"
+version = "0.1.1"
 description = "Sync and async Python clients and CLI for the Parsian Plus local HTTP API"
 readme = "README.md"
 requires-python = ">=3.10"

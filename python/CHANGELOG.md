@@ -1,5 +1,10 @@
 # Changelog
 
+## Python SDK 0.1.1
+
+- Translate the complete package description and SDK guide to English.
+- Support manual PyPI publishing with a selected version, without tags.
+
 ## Python SDK 0.1.0
 
 - Sync and async clients for every documented local operation.
