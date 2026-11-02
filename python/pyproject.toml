@@ -1,0 +1,46 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "parsian-api"
+version = "0.1.0"
+description = "Sync and async Python clients and CLI for the Parsian Plus local HTTP API"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "DevURANIUM"}]
+keywords = ["parsian", "bank", "api", "iran", "client"]
+dependencies = ["httpx>=0.28.1,<1", "python-dotenv>=1.0,<2"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/DevURANIUM/parsian-api"
+Documentation = "https://apibank.vcpu.tech/parsian/#python-sdk"
+Repository = "https://github.com/DevURANIUM/parsian-api"
+Issues = "https://github.com/DevURANIUM/parsian-api/issues"
+
+[project.scripts]
+parsian-api = "parsianapi.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/parsianapi"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/", "tests/", "examples/", "tools/", "README.md", "CHANGELOG.md", "LICENSE", "pyproject.toml"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

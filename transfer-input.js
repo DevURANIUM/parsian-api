@@ -1,0 +1,20 @@
+'use strict';
+const fs=require('node:fs');
+const forbidden=new Set(['__proto__','prototype','constructor']);
+const kebab=s=>s.replace(/([a-z0-9])([A-Z])/g,'$1-$2').toLowerCase();
+function invalid(message){return Object.assign(Error(message),{status:400,code:'INVALID_INPUT'});}
+function variants(s){return s.anyOf||[s];}
+function properties(s){return Object.assign({},...variants(s).map(v=>v.properties||{}));}
+function convert(value,schema={},key='field'){
+ const types=variants(schema).map(s=>s.type);if(value==='null'&&variants(schema).some(s=>s.nullable))return null;if(types.includes('integer')||types.includes('number')||(!types.some(Boolean)&&['amount','length','offset','page','size','limit','fromAmount','toAmount'].includes(key))){if(typeof value!=='string'||!/^\d+$/.test(value)||!Number.isSafeInteger(Number(value))){if(types.includes('string'))return value;throw invalid('Invalid integer: '+key);}return Number(value);}
+ if(types.includes('boolean')||key==='isSaveToContact'){if(!['true','false'].includes(value)){if(types.includes('string'))return value;throw invalid('Use true or false for '+key);}return value==='true';}return value;
+}
+function fieldsBody(fields,schema={}){
+ const output=schema.type==='array'?[]:{};for(const [raw,value]of Object.entries(fields)){const parts=raw.replace(/\[\]/g,'').split('.');if(parts.length>10||parts.some(p=>!p||forbidden.has(p)))throw invalid('Invalid field path');if(parts.some(p=>/^\d+$/.test(p)&&Number(p)>1000))throw invalid('Array index too large');let target=output,current=schema;for(let i=0;i<parts.length;i++){const props=properties(current),segment=parts[i],name=Object.keys(props).find(k=>k===segment||kebab(k)===segment)||segment.replace(/-([a-z])/g,(_,c)=>c.toUpperCase());const child=current.type==='array'&&/^\d+$/.test(segment)?current.items||{}:props[name]||{};if(i===parts.length-1){if(Array.isArray(value)){if(!variants(child).some(s=>s.type==='array'))throw invalid('Repeated field: '+raw);target[name]=value.map(v=>convert(v,child.items||{},name));}else if(variants(child).some(s=>s.type==='array'))target[name]=[convert(value,child.items||{},name)];else target[name]=convert(value,child,name);}else{if(target[name]!==undefined&&(target[name]===null||typeof target[name]!=='object'||Array.isArray(target[name])))throw invalid('Conflicting field path');target[name]??=child.type==='array'?[]:{};target=target[name];current=child;}}}return output;
+}
+function formBody(fields,schema={}){if(!fields||typeof fields!=='object'||Array.isArray(fields))throw invalid('Form fields required');return fieldsBody(fields,schema);}
+function parseArgs(args,{schema={},card=false}={}){
+ const flat={},positionals=[];let body,dryRun=false;for(let i=0;i<args.length;i++){const flag=args[i];if(flag==='--dry-run'){dryRun=true;continue;}if(!flag.startsWith('--')){positionals.push(flag);continue;}if(i+1>=args.length||args[i+1].startsWith('--'))throw invalid('Missing value for '+flag);const value=args[++i];if(flag==='--body'){body=require('./raw-cli').readJson(value);continue;}let name=flag.slice(2);if(name==='password-file'){flat.password=fs.readFileSync(value,'utf8').replace(/\r?\n$/,'');continue;}if(name==='code')name='password';if(Object.hasOwn(flat,name)){flat[name]=Array.isArray(flat[name])?[...flat[name],value]:[flat[name],value];}else flat[name]=value;}
+ if(positionals.length>3)throw invalid('Use SOURCE DESTINATION AMOUNT then named options');const names=card?['sourceCard','destinationCard','amount']:['sourceAccount','iban','amount'];positionals.forEach((value,i)=>{if(flat[names[i]]!==undefined||flat[kebab(names[i])]!==undefined)throw invalid('Duplicate '+names[i]);flat[names[i]]=value;});if(body!==undefined){if(Object.keys(flat).length)throw invalid('Conflicting input formats');return {body,dryRun};}const props=properties(schema);if(Object.keys(props).length)for(const key of Object.keys(flat)){const first=key.split('.')[0];if(!Object.keys(props).some(k=>k===first||kebab(k)===first))throw invalid('Unknown option: '+key);}return {body:fieldsBody(flat,schema),dryRun};
+}
+module.exports={parseArgs,formBody,fieldsBody,properties,kebab};

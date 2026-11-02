@@ -1,0 +1,1133 @@
+{
+  "info": {
+    "name": "Parsian API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://nextapi.iparsian724.ir"
+    },
+    {
+      "key": "sessionId",
+      "value": ""
+    },
+    {
+      "key": "statementId",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "General_ValidateWhitelistedUser",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/General/ValidateWhitelistedUser",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"mobileNumber\": \"{{value}}\",\n  \"versionNumber\": 0\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Otp_OtpGeneratorWithMobileNo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Otp/OtpGeneratorWithMobileNo",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"mobileNo\": \"{{value}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Otp_ValidateMobileNoWithOtp",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Otp/ValidateMobileNoWithOtp",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"mobileNo\": \"{{value}}\",\n  \"signedPassword\": \"{{value}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "User_Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/User/Login",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"additionalData\": {\n    \"firstTimeLogin\": false,\n    \"platformType\": \"{{value}}\",\n    \"versionNumber\": \"{{value}}\"\n  },\n  \"mobileNumber\": \"{{value}}\",\n  \"password\": \"{{value}}\",\n  \"username\": \"{{value}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Inquiry_GetCardsWithAmount",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Inquiry/GetCardsWithAmount",
+        "body": {
+          "mode": "raw",
+          "raw": "{}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Inquiry_GetDeposits",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Inquiry/GetDeposits",
+        "body": {
+          "mode": "raw",
+          "raw": "{}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "General_GetCustomerConfigDetailByCif",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          }
+        ],
+        "url": "{{baseUrl}}/api/General/GetCustomerConfigDetailByCif"
+      }
+    },
+    {
+      "name": "Inquiry_GetUserContactWithContactDetails",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Inquiry/GetUserContactWithContactDetails",
+        "body": {
+          "mode": "raw",
+          "raw": "null",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Inquiry_GetCustomerExtraData",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Inquiry/GetCustomerExtraData",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"cif\": \"{{value}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Workflow_GetActiveInstances",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Workflow/GetActiveInstances",
+        "body": {
+          "mode": "raw",
+          "raw": "{}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "MyRequest_GetMyRequests",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/MyRequest/GetMyRequests",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"requestType\": null,\n  \"requestCode\": null,\n  \"status\": null,\n  \"fromRequestDate\": null,\n  \"toRequestDate\": null,\n  \"fromExpireDate\": null,\n  \"toExpireDate\": null,\n  \"priority\": null,\n  \"operational\": false,\n  \"loadApproval\": false,\n  \"clientId\": null,\n  \"description\": null,\n  \"startRow\": 0,\n  \"endRow\": 0\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Cartable_GetCartableRequests",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Cartable/GetCartableRequests",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"clientId\": null,\n  \"description\": null,\n  \"fromExpireDate\": null,\n  \"fromRequestDate\": null,\n  \"loadApproval\": false,\n  \"operational\": false,\n  \"priority\": null,\n  \"requestCode\": null,\n  \"requestType\": null,\n  \"status\": null,\n  \"toExpireDate\": null,\n  \"toRequestDate\": null,\n  \"startRow\": null,\n  \"endRow\": null\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "General_GetCardAndDepositWithAmount",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          }
+        ],
+        "url": "{{baseUrl}}/api/General/GetCardAndDepositWithAmount/"
+      }
+    },
+    {
+      "name": "General_GetHomePageServices",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          }
+        ],
+        "url": "{{baseUrl}}/api/General/GetHomePageServices"
+      }
+    },
+    {
+      "name": "Wallet_TokenExchange",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Wallet/TokenExchange",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"responseType\": \"{{value}}\",\n  \"serviceAccessCategoryType\": \"{{value}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "General_GetBannersByMode",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          }
+        ],
+        "url": "{{baseUrl}}/api/General/GetBannersByMode?bannerMode={{bannerMode}}"
+      }
+    },
+    {
+      "name": "General_GetBottomTabMenus",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          }
+        ],
+        "url": "{{baseUrl}}/api/General/GetBottomTabMenus"
+      }
+    },
+    {
+      "name": "Inquiry_GetAccountBalance",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Inquiry/GetAccountBalance",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"accountNumber\": \"{{value}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Inquiry_GetModernGatewayNewServiceLimitation",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Inquiry/GetModernGatewayNewServiceLimitation",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"activityType\": null,\n  \"customerNumber\": \"{{value}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Workflow_CancelInstance",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Workflow/CancelInstance",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"WorkflowInstanceId\": \"{{value}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Inquiry_GetCardOwnerWithoutLogin",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Inquiry/GetCardOwnerWithoutLogin",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"cardAuthorizeParams\": {\n    \"cvv2\": \"{{value}}\",\n    \"expDate\": \"{{value}}\",\n    \"pin\": \"{{value}}\",\n    \"pinType\": 0,\n    \"track2\": \"{{value}}\"\n  },\n  \"destinationPan\": \"{{value}}\",\n  \"pan\": \"{{value}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Inquiry_GetIbanFromCard",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Inquiry/GetIbanFromCard",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"cardNumber\": \"{{value}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "General_GetTransmissionMethod",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/General/GetTransmissionMethod",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"amount\": 0,\n  \"destinationNo\": \"{{value}}\",\n  \"mobileStep\": \"{{value}}\",\n  \"sourceNo\": \"{{value}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Workflow_createAndExecute",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Workflow/createAndExecute",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"Name\": \"{{value}}\",\n  \"UserId\": \"{{value}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Workflow_InquiryState",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Workflow/InquiryState",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"WorkflowInstanceId\": \"{{value}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Workflow_PublishEvent",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Workflow/PublishEvent",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"EventData\": {\n    \"ActionType\": \"{{value}}\",\n    \"TransferType\": \"{{value}}\",\n    \"cardTransferData\": {\n      \"amount\": \"{{value}}\",\n      \"contactDestination\": {\n        \"data\": \"{{value}}\",\n        \"type\": \"{{value}}\"\n      },\n      \"deposit\": \"{{value}}\",\n      \"des\": \"{{value}}\",\n      \"iban\": \"{{value}}\",\n      \"isme\": false,\n      \"mainAccount\": \"{{value}}\",\n      \"method\": \"{{value}}\",\n      \"month\": \"{{value}}\",\n      \"name\": \"{{value}}\",\n      \"pan\": \"{{value}}\",\n      \"parsianData\": {\n        \"data\": \"{{value}}\",\n        \"type\": \"{{value}}\"\n      },\n      \"paymentCode\": \"{{value}}\",\n      \"receiver\": \"{{value}}\",\n      \"receiverFirstName\": \"{{value}}\",\n      \"receiverLastName\": \"{{value}}\",\n      \"senderDescription\": \"{{value}}\",\n      \"step2\": \"{{value}}\",\n      \"switchResponseRRN\": \"{{value}}\",\n      \"transactionDate\": \"{{value}}\",\n      \"transactionNumber\": \"{{value}}\",\n      \"transferFee\": \"{{value}}\",\n      \"year\": \"{{value}}\"\n    },\n    \"dateTransaction\": \"{{value}}\"\n  },\n  \"EventName\": \"{{value}}\",\n  \"WorkflowInstanceId\": \"{{value}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "otp_GetOfflinePasswordStatus",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/otp/GetOfflinePasswordStatus",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"CardNumber\": \"{{value}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Otp_ShetabOtpSmsV2",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Otp/ShetabOtpSmsV2",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"pan\": \"{{value}}\",\n  \"amount\": 0,\n  \"transactionType\": \"{{value}}\",\n  \"trackingNumber\": \"{{value}}\",\n  \"cardAcceptorName\": \"{{value}}\",\n  \"payee\": \"{{value}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Transfer_CardTransferWithoutLogin",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Transfer/CardTransferWithoutLogin",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"amount\": 0,\n  \"cvv2\": \"{{value}}\",\n  \"destination\": \"{{value}}\",\n  \"destinationType\": \"{{value}}\",\n  \"expDate\": \"{{value}}\",\n  \"pan\": \"{{value}}\",\n  \"pin\": \"{{value}}\",\n  \"pinType\": \"{{value}}\",\n  \"transactionNumber\": \"{{value}}\",\n  \"mobileNo\": \"{{value}}\",\n  \"isSaveToContact\": false,\n  \"senderDescription\": null,\n  \"receiverDescription\": null,\n  \"firstName\": \"{{value}}\",\n  \"lastName\": \"{{value}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Inquiry_IbanEnquiry",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Inquiry/IbanEnquiry",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"iban\": \"{{value}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "payment_PaymentIDCheckByCB",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/payment/PaymentIDCheckByCB",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"applicantBicCode\": null,\n  \"iban\": \"{{value}}\",\n  \"paymentID\": \"{{value}}\",\n  \"amount\": 0\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "General_LoadGeneralParameter",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/General/LoadGeneralParameter",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"code\": \"{{value}}\",\n  \"isActive\": false\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Inquiry_SayahSystemCompatibilityInquiry",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Inquiry/SayahSystemCompatibilityInquiry",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"sourceAccountExternalRef\": \"{{value}}\",\n  \"destinationAccountExternalRef\": null,\n  \"destinationShebaId\": \"{{value}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Otp_OtpGenerateForAccountTransfer",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Otp/OtpGenerateForAccountTransfer",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"accountNumber\": \"{{value}}\",\n  \"amount\": 0,\n  \"chAccountTransferType\": \"{{value}}\",\n  \"chChannelType\": \"{{value}}\",\n  \"customerNumber\": \"{{value}}\",\n  \"username\": \"{{value}}\",\n  \"destinationNumber\": \"{{value}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Transfer_PostPaymentOrder",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Transfer/PostPaymentOrder",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"chPaymentOrderRqBean\": {\n    \"amount\": 0,\n    \"branchCode\": \"{{value}}\",\n    \"creditorIdentification\": {\n      \"iban\": \"{{value}}\",\n      \"accountNumber\": null,\n      \"addressTypeCode\": null\n    },\n    \"debtorIdentification\": {\n      \"accountNumber\": \"{{value}}\",\n      \"iban\": null,\n      \"addressTypeCode\": null\n    },\n    \"paymentPurpose\": \"{{value}}\"\n  },\n  \"chSecondPasswordType\": \"{{value}}\",\n  \"transferDescription\": \"{{value}}\",\n  \"secondPassword\": \"{{value}}\",\n  \"firstName\": \"{{value}}\",\n  \"lastName\": \"{{value}}\",\n  \"isSaveToContact\": false,\n  \"paymentCode\": \"{{value}}\",\n  \"postPaymentOrder\": \"{{value}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Report_GetPaymentOrder",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Report/GetPaymentOrder",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"chPaymentOrderParamBean\": {\n    \"amount\": null,\n    \"branchCode\": null,\n    \"cbiResult\": null,\n    \"creditorBankId\": null,\n    \"creditorIban\": null,\n    \"creditorIdentificationId\": null,\n    \"creditorShahabCode\": null,\n    \"debtorAccountNumbers\": [],\n    \"debtorBankId\": null,\n    \"debtorIban\": null,\n    \"debtorIdentificationId\": null,\n    \"debtorShahabCode\": null,\n    \"fromAmount\": null,\n    \"fromSubmitTime\": \"{{value}}\",\n    \"id\": null,\n    \"messageId\": null,\n    \"name\": null,\n    \"page\": \"{{value}}\",\n    \"paymentCode\": null,\n    \"persianWorkingDate\": null,\n    \"ppName\": null,\n    \"remittanceInformationStructured\": null,\n    \"remittanceInformationUnstructured\": null,\n    \"reversed\": null,\n    \"sendToCbiTime\": null,\n    \"settledDateTime\": null,\n    \"size\": \"{{value}}\",\n    \"statusCode\": null,\n    \"submitTime\": null,\n    \"toAmount\": null,\n    \"toSubmitTime\": \"{{value}}\",\n    \"trackingCode\": \"{{value}}\",\n    \"transactionId\": null\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Transfer_AchNormalTransfer",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Transfer/AchNormalTransfer",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"amount\": 0,\n  \"checkUniqueTrackingCode\": false,\n  \"sourceDepositNumber\": \"{{value}}\",\n  \"ibanNumber\": \"{{value}}\",\n  \"chSecondPasswordType\": \"{{value}}\",\n  \"uniqueTrackingCode\": \"{{value}}\",\n  \"secondPassword\": \"{{value}}\",\n  \"ownerName\": \"{{value}}\",\n  \"firstName\": \"{{value}}\",\n  \"lastName\": \"{{value}}\",\n  \"email\": \"{{value}}\",\n  \"factorNumber\": \"{{value}}\",\n  \"transferDescription\": \"{{value}}\",\n  \"description\": \"{{value}}\",\n  \"reason\": \"{{value}}\",\n  \"isSaveToContact\": false\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Inquiry_GetStatement",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Inquiry/GetStatement",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"depositNumber\": \"{{value}}\",\n  \"action\": null,\n  \"length\": 0,\n  \"offset\": 0,\n  \"description\": \"{{value}}\",\n  \"fromDate\": \"{{value}}\",\n  \"toDate\": \"{{value}}\",\n  \"order\": \"{{value}}\",\n  \"customerDescription\": \"{{value}}\",\n  \"chStatementSearchDirection\": \"{{value}}\",\n  \"fromAmount\": null,\n  \"toAmount\": null,\n  \"typeTransaction\": null\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Inquiry_GetMinBalanceAverage",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Inquiry/GetMinBalanceAverage",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"externalRefList\": [],\n  \"fromDate\": \"{{value}}\",\n  \"toDate\": \"{{value}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Receipt_GetNextBankReceiptByStatement_by_id",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Receipt/GetNextBankReceiptByStatement/{{statementId}}"
+      }
+    },
+    {
+      "name": "Inquiry_AchTransferFullReport",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Inquiry/AchTransferFullReport",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"cif\": null,\n  \"clientTrackingCode\": null,\n  \"description\": null,\n  \"destinationIbanNumber\": null,\n  \"destinationOwnerName\": null,\n  \"factorNumber\": null,\n  \"fromIssueDate\": null,\n  \"fromRegisterDate\": \"{{value}}\",\n  \"fromTransactionAmount\": null,\n  \"length\": 0,\n  \"offset\": 0,\n  \"order\": \"{{value}}\",\n  \"referenceId\": null,\n  \"sourceDepositIban\": null,\n  \"sourceDepositNumber\": \"{{value}}\",\n  \"statusSet\": null,\n  \"toIssueDate\": null,\n  \"toRegisterDate\": \"{{value}}\",\n  \"toTransactionAmount\": null,\n  \"transactionStatusSet\": null,\n  \"transferDescription\": null\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Receipt_GetNextBankReceipts",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Receipt/GetNextBankReceipts",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"fromDate\": \"{{value}}\",\n  \"toDate\": \"{{value}}\",\n  \"pageNumber\": 0,\n  \"pageSize\": 0,\n  \"ReceiptKeyword\": null,\n  \"FromAmount\": null,\n  \"ToAmount\": null\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "General_HandleCustomerConfigAndDetail",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/General/HandleCustomerConfigAndDetail",
+        "body": {
+          "mode": "raw",
+          "raw": "[]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "General_GetServicePageServices",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          }
+        ],
+        "url": "{{baseUrl}}/api/General/GetServicePageServices"
+      }
+    },
+    {
+      "name": "card_getCustomerAccountAndCard",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/card/getCustomerAccountAndCard",
+        "body": {
+          "mode": "raw",
+          "raw": "{}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "General_GetCustomerConfigDetailByCifWithOutSession",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/General/GetCustomerConfigDetailByCifWithOutSession",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"cif\": \"{{value}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Workflow_GetLatestActiveInstance",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sessionId",
+            "value": "{{sessionId}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/Workflow/GetLatestActiveInstance",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"WorkflowName\": \"{{value}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

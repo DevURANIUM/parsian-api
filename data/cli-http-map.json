@@ -1,0 +1,506 @@
+[
+  {
+    "command": "customer-config-public",
+    "method": "POST",
+    "path": "/v1/customer/config",
+    "endpoint": "General_GetCustomerConfigDetailByCifWithOutSession"
+  },
+  {
+    "command": "workflow-latest",
+    "method": "POST",
+    "path": "/v1/workflow/latest",
+    "endpoint": "Workflow_GetLatestActiveInstance"
+  },
+  {
+    "command": "transfer-instant",
+    "method": "POST",
+    "path": "/v1/transfers/instant",
+    "endpoint": "Transfer_PostPaymentOrder"
+  },
+  {
+    "command": "transfer-instant-otp",
+    "method": "POST",
+    "path": "/v1/transfers/instant/otp",
+    "endpoint": "Otp_OtpGenerateForAccountTransfer"
+  },
+  {
+    "command": "transfer-iban-otp",
+    "method": "POST",
+    "path": "/v1/transfers/iban/otp",
+    "endpoint": "Otp_OtpGenerateForAccountTransfer"
+  },
+  {
+    "command": "transfer-order",
+    "method": "POST",
+    "path": "/v1/transfers/order",
+    "endpoint": "Transfer_PostPaymentOrder"
+  },
+  {
+    "command": "validate-mobile",
+    "method": "POST",
+    "path": "/v1/auth/mobile/validate",
+    "endpoint": "General_ValidateWhitelistedUser"
+  },
+  {
+    "command": "otp-request",
+    "method": "POST",
+    "path": "/v1/auth/otp/request",
+    "endpoint": "Otp_OtpGeneratorWithMobileNo"
+  },
+  {
+    "command": "otp",
+    "method": "POST",
+    "path": "/v1/auth/otp",
+    "endpoint": "Otp_ValidateMobileNoWithOtp"
+  },
+  {
+    "command": "login",
+    "method": "POST",
+    "path": "/v1/auth/login",
+    "endpoint": "User_Login"
+  },
+  {
+    "command": "cards",
+    "method": "GET",
+    "path": "/v1/cards",
+    "endpoint": "Inquiry_GetCardsWithAmount"
+  },
+  {
+    "command": "accounts",
+    "method": "GET",
+    "path": "/v1/accounts",
+    "endpoint": "Inquiry_GetDeposits"
+  },
+  {
+    "command": "profile",
+    "method": "POST",
+    "path": "/v1/profile",
+    "endpoint": "Inquiry_GetCustomerExtraData"
+  },
+  {
+    "command": "config",
+    "method": "GET",
+    "path": "/v1/config",
+    "endpoint": "General_GetCustomerConfigDetailByCif"
+  },
+  {
+    "command": "contacts",
+    "method": "GET",
+    "path": "/v1/contacts",
+    "endpoint": "Inquiry_GetUserContactWithContactDetails"
+  },
+  {
+    "command": "workflow-active",
+    "method": "GET",
+    "path": "/v1/workflow/active",
+    "endpoint": "Workflow_GetActiveInstances"
+  },
+  {
+    "command": "requests",
+    "method": "POST",
+    "path": "/v1/requests",
+    "endpoint": "MyRequest_GetMyRequests"
+  },
+  {
+    "command": "cartable",
+    "method": "POST",
+    "path": "/v1/cartable",
+    "endpoint": "Cartable_GetCartableRequests"
+  },
+  {
+    "command": "accounts-with-cards",
+    "method": "GET",
+    "path": "/v1/accounts/with-cards",
+    "endpoint": "General_GetCardAndDepositWithAmount"
+  },
+  {
+    "command": "home",
+    "method": "GET",
+    "path": "/v1/home",
+    "endpoint": "General_GetHomePageServices"
+  },
+  {
+    "command": "wallet-token",
+    "method": "POST",
+    "path": "/v1/wallet/token",
+    "endpoint": "Wallet_TokenExchange"
+  },
+  {
+    "command": "banners",
+    "method": "GET",
+    "path": "/v1/banners",
+    "endpoint": "General_GetBannersByMode"
+  },
+  {
+    "command": "menus",
+    "method": "GET",
+    "path": "/v1/menus",
+    "endpoint": "General_GetBottomTabMenus"
+  },
+  {
+    "command": "account-balance",
+    "method": "GET",
+    "path": "/v1/accounts/{number}/balance",
+    "endpoint": "Inquiry_GetAccountBalance"
+  },
+  {
+    "command": "transfer-limits",
+    "method": "POST",
+    "path": "/v1/transfers/limits",
+    "endpoint": "Inquiry_GetModernGatewayNewServiceLimitation"
+  },
+  {
+    "command": "workflow-cancel",
+    "method": "POST",
+    "path": "/v1/workflow/cancel",
+    "endpoint": "Workflow_CancelInstance"
+  },
+  {
+    "command": "card-owner",
+    "method": "POST",
+    "path": "/v1/transfers/card/owner",
+    "endpoint": "Inquiry_GetCardOwnerWithoutLogin"
+  },
+  {
+    "command": "iban",
+    "method": "GET",
+    "path": "/v1/cards/{number}/iban",
+    "endpoint": "Inquiry_GetIbanFromCard"
+  },
+  {
+    "command": "transfer-methods",
+    "method": "POST",
+    "path": "/v1/transfers/methods",
+    "endpoint": "General_GetTransmissionMethod"
+  },
+  {
+    "command": "workflow-create",
+    "method": "POST",
+    "path": "/v1/workflow/create",
+    "endpoint": "Workflow_createAndExecute"
+  },
+  {
+    "command": "workflow-state",
+    "method": "POST",
+    "path": "/v1/workflow/state",
+    "endpoint": "Workflow_InquiryState"
+  },
+  {
+    "command": "workflow-event",
+    "method": "POST",
+    "path": "/v1/workflow/event",
+    "endpoint": "Workflow_PublishEvent"
+  },
+  {
+    "command": "card-password-status",
+    "method": "POST",
+    "path": "/v1/cards/password/status",
+    "endpoint": "otp_GetOfflinePasswordStatus"
+  },
+  {
+    "command": "transfer-otp",
+    "method": "POST",
+    "path": "/v1/transfers/card/otp",
+    "endpoint": "Otp_ShetabOtpSmsV2"
+  },
+  {
+    "command": "transfer-card",
+    "method": "POST",
+    "path": "/v1/transfers/card",
+    "endpoint": "Transfer_CardTransferWithoutLogin"
+  },
+  {
+    "command": "owner",
+    "method": "GET",
+    "path": "/v1/owner/iban/{iban}",
+    "endpoint": "Inquiry_IbanEnquiry"
+  },
+  {
+    "command": "payment-id-check",
+    "method": "POST",
+    "path": "/v1/payments/id/check",
+    "endpoint": "payment_PaymentIDCheckByCB"
+  },
+  {
+    "command": "parameters",
+    "method": "POST",
+    "path": "/v1/parameters",
+    "endpoint": "General_LoadGeneralParameter"
+  },
+  {
+    "command": "sayah-inquiry",
+    "method": "POST",
+    "path": "/v1/transfers/sayah",
+    "endpoint": "Inquiry_SayahSystemCompatibilityInquiry"
+  },
+  {
+    "command": "account-transfer-otp",
+    "method": "POST",
+    "path": "/v1/transfers/account/otp",
+    "endpoint": "Otp_OtpGenerateForAccountTransfer"
+  },
+  {
+    "command": "transfer-iban",
+    "method": "POST",
+    "path": "/v1/transfers/iban",
+    "endpoint": "Transfer_PostPaymentOrder"
+  },
+  {
+    "command": "payment-orders",
+    "method": "POST",
+    "path": "/v1/reports/payment-orders",
+    "endpoint": "Report_GetPaymentOrder"
+  },
+  {
+    "command": "transfer-ach",
+    "method": "POST",
+    "path": "/v1/transfers/ach",
+    "endpoint": "Transfer_AchNormalTransfer"
+  },
+  {
+    "command": "transactions",
+    "method": "GET",
+    "path": "/v1/transactions",
+    "endpoint": "Inquiry_GetStatement"
+  },
+  {
+    "command": "balance-average",
+    "method": "POST",
+    "path": "/v1/balances/average",
+    "endpoint": "Inquiry_GetMinBalanceAverage"
+  },
+  {
+    "command": "transaction",
+    "method": "GET",
+    "path": "/v1/transactions/{id}",
+    "endpoint": "Receipt_GetNextBankReceiptByStatement_by_id"
+  },
+  {
+    "command": "transfer-report",
+    "method": "POST",
+    "path": "/v1/reports/transfers",
+    "endpoint": "Inquiry_AchTransferFullReport"
+  },
+  {
+    "command": "receipts",
+    "method": "POST",
+    "path": "/v1/receipts",
+    "endpoint": "Receipt_GetNextBankReceipts"
+  },
+  {
+    "command": "config-save",
+    "method": "POST",
+    "path": "/v1/config",
+    "endpoint": "General_HandleCustomerConfigAndDetail"
+  },
+  {
+    "command": "services",
+    "method": "GET",
+    "path": "/v1/services",
+    "endpoint": "General_GetServicePageServices"
+  },
+  {
+    "command": "customer-cards",
+    "method": "GET",
+    "path": "/v1/customer/cards",
+    "endpoint": "card_getCustomerAccountAndCard"
+  },
+  {
+    "command": "transfer-instant-fixed",
+    "path": "/v1/transfers/fixed/instant",
+    "kind": "instant",
+    "mode": "fixed",
+    "step": "submit",
+    "endpoint": "Transfer_PostPaymentOrder",
+    "title": "پل با رمز ثابت",
+    "method": "POST",
+    "group": "transfers-fixed"
+  },
+  {
+    "command": "transfer-iban-fixed",
+    "path": "/v1/transfers/fixed/iban",
+    "kind": "iban",
+    "mode": "fixed",
+    "step": "submit",
+    "endpoint": "Transfer_AchNormalTransfer",
+    "title": "شبا با رمز ثابت",
+    "method": "POST",
+    "group": "transfers-fixed"
+  },
+  {
+    "command": "transfer-instant-sms-request",
+    "path": "/v1/transfers/sms/instant/otp",
+    "kind": "instant",
+    "mode": "sms",
+    "step": "otp",
+    "endpoint": "Otp_OtpGenerateForAccountTransfer",
+    "title": "دریافت رمز پیامکی پل",
+    "method": "POST",
+    "group": "transfers-sms"
+  },
+  {
+    "command": "transfer-instant-sms",
+    "path": "/v1/transfers/sms/instant",
+    "kind": "instant",
+    "mode": "sms",
+    "step": "submit",
+    "endpoint": "Transfer_PostPaymentOrder",
+    "title": "پل با رمز پیامکی",
+    "method": "POST",
+    "group": "transfers-sms"
+  },
+  {
+    "command": "transfer-iban-sms-request",
+    "path": "/v1/transfers/sms/iban/otp",
+    "kind": "iban",
+    "mode": "sms",
+    "step": "otp",
+    "endpoint": "Otp_OtpGenerateForAccountTransfer",
+    "title": "دریافت رمز پیامکی شبا",
+    "method": "POST",
+    "group": "transfers-sms"
+  },
+  {
+    "command": "transfer-iban-sms",
+    "path": "/v1/transfers/sms/iban",
+    "kind": "iban",
+    "mode": "sms",
+    "step": "submit",
+    "endpoint": "Transfer_AchNormalTransfer",
+    "title": "شبا با رمز پیامکی",
+    "method": "POST",
+    "group": "transfers-sms"
+  },
+  {
+    "command": "pol",
+    "path": "/v1/pol",
+    "kind": "instant",
+    "mode": "fixed",
+    "step": "submit",
+    "endpoint": "Transfer_PostPaymentOrder",
+    "title": "پل با رمز ثابت",
+    "method": "POST",
+    "group": "transfers-fixed",
+    "target": "transfer-instant-fixed"
+  },
+  {
+    "command": "sheba",
+    "path": "/v1/sheba",
+    "kind": "iban",
+    "mode": "fixed",
+    "step": "submit",
+    "endpoint": "Transfer_AchNormalTransfer",
+    "title": "شبا با رمز ثابت",
+    "method": "POST",
+    "group": "transfers-fixed",
+    "target": "transfer-iban-fixed"
+  },
+  {
+    "command": "pol-sms",
+    "path": "/v1/pol/sms",
+    "kind": "instant",
+    "mode": "sms",
+    "step": "submit",
+    "endpoint": "Transfer_PostPaymentOrder",
+    "title": "پل با رمز پیامکی",
+    "method": "POST",
+    "group": "transfers-sms",
+    "target": "transfer-instant-sms"
+  },
+  {
+    "command": "sheba-sms",
+    "path": "/v1/sheba/sms",
+    "kind": "iban",
+    "mode": "sms",
+    "step": "submit",
+    "endpoint": "Transfer_AchNormalTransfer",
+    "title": "شبا با رمز پیامکی",
+    "method": "POST",
+    "group": "transfers-sms",
+    "target": "transfer-iban-sms"
+  },
+  {
+    "command": "pol-code",
+    "path": "/v1/pol/code",
+    "kind": "instant",
+    "mode": "sms",
+    "step": "otp",
+    "endpoint": "Otp_OtpGenerateForAccountTransfer",
+    "title": "دریافت رمز پیامکی پل",
+    "method": "POST",
+    "group": "transfers-sms",
+    "target": "transfer-instant-sms-request"
+  },
+  {
+    "command": "sheba-code",
+    "path": "/v1/sheba/code",
+    "kind": "iban",
+    "mode": "sms",
+    "step": "otp",
+    "endpoint": "Otp_OtpGenerateForAccountTransfer",
+    "title": "دریافت رمز پیامکی شبا",
+    "method": "POST",
+    "group": "transfers-sms",
+    "target": "transfer-iban-sms-request"
+  },
+  {
+    "command": "status",
+    "method": "GET",
+    "path": "/v1/auth/session"
+  },
+  {
+    "command": "check-session",
+    "method": "POST",
+    "path": "/v1/auth/session/check"
+  },
+  {
+    "command": "ensure-session",
+    "method": "POST",
+    "path": "/v1/auth/session/ensure"
+  },
+  {
+    "command": "logout",
+    "method": "POST",
+    "path": "/v1/auth/logout"
+  },
+  {
+    "command": "deposits",
+    "method": "GET",
+    "path": "/v1/deposits"
+  },
+  {
+    "command": "cards-all",
+    "method": "GET",
+    "path": "/v1/cards/all"
+  },
+  {
+    "command": "deposits-all",
+    "method": "GET",
+    "path": "/v1/deposits/all"
+  },
+  {
+    "command": "balance",
+    "method": "GET",
+    "path": "/v1/balance"
+  },
+  {
+    "command": "balance-cards",
+    "method": "GET",
+    "path": "/v1/balances/cards"
+  },
+  {
+    "command": "balance-deposits",
+    "method": "GET",
+    "path": "/v1/balances/deposits"
+  },
+  {
+    "command": "transactions-latest",
+    "method": "GET",
+    "path": "/v1/transactions/latest"
+  },
+  {
+    "command": "transaction-find",
+    "method": "GET",
+    "path": "/v1/transactions/find/{code}"
+  }
+]

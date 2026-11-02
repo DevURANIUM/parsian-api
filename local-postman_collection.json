@@ -1,0 +1,2907 @@
+{
+  "info": {
+    "name": "Parsian Local API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://127.0.0.1:3101/v1"
+    },
+    {
+      "key": "apiKey",
+      "value": "YOUR_API_KEY"
+    }
+  ],
+  "item": [
+    {
+      "name": "customer-config-public",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/customer/config",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "cif",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "workflow-latest",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/workflow/latest",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "WorkflowName",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "transfer-instant",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/transfers/instant",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "sourceAccount",
+              "value": "YOUR_ACCOUNT",
+              "type": "text"
+            },
+            {
+              "key": "iban",
+              "value": "IR000000000000000000000000",
+              "type": "text"
+            },
+            {
+              "key": "amount",
+              "value": "10000",
+              "type": "text"
+            },
+            {
+              "key": "passwordMode",
+              "value": "sms",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "YOUR_SMS_CODE",
+              "type": "text"
+            },
+            {
+              "key": "reason",
+              "value": "LMAP",
+              "type": "text"
+            },
+            {
+              "key": "branchCode",
+              "value": "YOUR_BRANCH_CODE",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "transfer-instant-otp",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/transfers/instant/otp",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "sourceAccount",
+              "value": "YOUR_ACCOUNT",
+              "type": "text"
+            },
+            {
+              "key": "iban",
+              "value": "IR000000000000000000000000",
+              "type": "text"
+            },
+            {
+              "key": "amount",
+              "value": "10000",
+              "type": "text"
+            },
+            {
+              "key": "customerNumber",
+              "value": "YOUR_CUSTOMER_NUMBER",
+              "type": "text"
+            },
+            {
+              "key": "username",
+              "value": "YOUR_USERNAME",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "transfer-iban-otp",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/transfers/iban/otp",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "sourceAccount",
+              "value": "YOUR_ACCOUNT",
+              "type": "text"
+            },
+            {
+              "key": "iban",
+              "value": "IR000000000000000000000000",
+              "type": "text"
+            },
+            {
+              "key": "amount",
+              "value": "10000",
+              "type": "text"
+            },
+            {
+              "key": "customerNumber",
+              "value": "YOUR_CUSTOMER_NUMBER",
+              "type": "text"
+            },
+            {
+              "key": "username",
+              "value": "YOUR_USERNAME",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "transfer-order",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/transfers/order",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "chPaymentOrderRqBean.amount",
+              "value": "0",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderRqBean.branchCode",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderRqBean.creditorIdentification.iban",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderRqBean.creditorIdentification.accountNumber",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderRqBean.creditorIdentification.addressTypeCode",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderRqBean.debtorIdentification.accountNumber",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderRqBean.debtorIdentification.iban",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderRqBean.debtorIdentification.addressTypeCode",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderRqBean.paymentPurpose",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "chSecondPasswordType",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "transferDescription",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "secondPassword",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "firstName",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "lastName",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "isSaveToContact",
+              "value": "false",
+              "type": "text"
+            },
+            {
+              "key": "paymentCode",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "postPaymentOrder",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "validate-mobile",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/auth/mobile/validate",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "mobileNumber",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "versionNumber",
+              "value": "0",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "otp-request",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/auth/otp/request",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "mobileNo",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "otp",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/auth/otp",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "mobileNo",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "signedPassword",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "login",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/auth/login",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "additionalData.firstTimeLogin",
+              "value": "false",
+              "type": "text"
+            },
+            {
+              "key": "additionalData.platformType",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "additionalData.versionNumber",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "mobileNumber",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "username",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "cards",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/cards",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "accounts",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/accounts",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "profile",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/profile",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "cif",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "config",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/config",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "config-save",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/config",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        }
+      }
+    },
+    {
+      "name": "contacts",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/contacts",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "workflow-active",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/workflow/active",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "requests",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/requests",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "requestType",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "requestCode",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "status",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "fromRequestDate",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "toRequestDate",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "fromExpireDate",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "toExpireDate",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "priority",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "operational",
+              "value": "false",
+              "type": "text"
+            },
+            {
+              "key": "loadApproval",
+              "value": "false",
+              "type": "text"
+            },
+            {
+              "key": "clientId",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "startRow",
+              "value": "0",
+              "type": "text"
+            },
+            {
+              "key": "endRow",
+              "value": "0",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "cartable",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/cartable",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "clientId",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "fromExpireDate",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "fromRequestDate",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "loadApproval",
+              "value": "false",
+              "type": "text"
+            },
+            {
+              "key": "operational",
+              "value": "false",
+              "type": "text"
+            },
+            {
+              "key": "priority",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "requestCode",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "requestType",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "status",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "toExpireDate",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "toRequestDate",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "startRow",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "endRow",
+              "value": "null",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "accounts-with-cards",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/accounts/with-cards",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "home",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/home",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "wallet-token",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/wallet/token",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "responseType",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "serviceAccessCategoryType",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "banners",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/banners",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "menus",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/menus",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "account-balance",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/accounts/{{number}}/balance",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "transfer-limits",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/transfers/limits",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "activityType",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "customerNumber",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "workflow-cancel",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/workflow/cancel",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "WorkflowInstanceId",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "card-owner",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/transfers/card/owner",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "cardAuthorizeParams.cvv2",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "cardAuthorizeParams.expDate",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "cardAuthorizeParams.pin",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "cardAuthorizeParams.pinType",
+              "value": "0",
+              "type": "text"
+            },
+            {
+              "key": "cardAuthorizeParams.track2",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "destinationPan",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "pan",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "iban",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/cards/{{number}}/iban",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "transfer-methods",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/transfers/methods",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "amount",
+              "value": "0",
+              "type": "text"
+            },
+            {
+              "key": "destinationNo",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "mobileStep",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "sourceNo",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "workflow-create",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/workflow/create",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "Name",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "UserId",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "workflow-state",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/workflow/state",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "WorkflowInstanceId",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "workflow-event",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/workflow/event",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "EventData.ActionType",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.TransferType",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.amount",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.contactDestination.data",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.contactDestination.type",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.deposit",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.des",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.iban",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.isme",
+              "value": "false",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.mainAccount",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.method",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.month",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.name",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.pan",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.parsianData.data",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.parsianData.type",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.paymentCode",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.receiver",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.receiverFirstName",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.receiverLastName",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.senderDescription",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.step2",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.switchResponseRRN",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.transactionDate",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.transactionNumber",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.transferFee",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.cardTransferData.year",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventData.dateTransaction",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "EventName",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "WorkflowInstanceId",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "card-password-status",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/cards/password/status",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "CardNumber",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "transfer-otp",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/transfers/card/otp",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "sourceCard",
+              "value": "0000000000000000",
+              "type": "text"
+            },
+            {
+              "key": "destinationCard",
+              "value": "1111111111111111",
+              "type": "text"
+            },
+            {
+              "key": "amount",
+              "value": "10000",
+              "type": "text"
+            },
+            {
+              "key": "trackingNumber",
+              "value": "YOUR_OTP_TRACKING",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "transfer-card",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/transfers/card",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "sourceCard",
+              "value": "0000000000000000",
+              "type": "text"
+            },
+            {
+              "key": "destinationCard",
+              "value": "1111111111111111",
+              "type": "text"
+            },
+            {
+              "key": "amount",
+              "value": "10000",
+              "type": "text"
+            },
+            {
+              "key": "passwordMode",
+              "value": "sms",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "YOUR_CARD_PASSWORD",
+              "type": "text"
+            },
+            {
+              "key": "cvv2",
+              "value": "YOUR_CVV2",
+              "type": "text"
+            },
+            {
+              "key": "expiry",
+              "value": "YYMM",
+              "type": "text"
+            },
+            {
+              "key": "transactionNumber",
+              "value": "YOUR_OWNER_INQUIRY_TRANSACTION",
+              "type": "text"
+            },
+            {
+              "key": "mobileNumber",
+              "value": "YOUR_MOBILE",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "owner",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/owner/iban/{{iban}}",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "payment-id-check",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/payments/id/check",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "applicantBicCode",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "iban",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "paymentID",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "amount",
+              "value": "0",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "parameters",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/parameters",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "code",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "isActive",
+              "value": "false",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "sayah-inquiry",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/transfers/sayah",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "sourceAccountExternalRef",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "destinationAccountExternalRef",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "destinationShebaId",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "account-transfer-otp",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/transfers/account/otp",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "sourceAccount",
+              "value": "YOUR_ACCOUNT",
+              "type": "text"
+            },
+            {
+              "key": "iban",
+              "value": "IR000000000000000000000000",
+              "type": "text"
+            },
+            {
+              "key": "amount",
+              "value": "10000",
+              "type": "text"
+            },
+            {
+              "key": "customerNumber",
+              "value": "YOUR_CUSTOMER_NUMBER",
+              "type": "text"
+            },
+            {
+              "key": "username",
+              "value": "YOUR_USERNAME",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "transfer-iban",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/transfers/iban",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "sourceAccount",
+              "value": "YOUR_ACCOUNT",
+              "type": "text"
+            },
+            {
+              "key": "iban",
+              "value": "IR000000000000000000000000",
+              "type": "text"
+            },
+            {
+              "key": "amount",
+              "value": "10000",
+              "type": "text"
+            },
+            {
+              "key": "passwordMode",
+              "value": "sms",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "YOUR_SMS_CODE",
+              "type": "text"
+            },
+            {
+              "key": "reason",
+              "value": "LMAP",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "payment-orders",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/reports/payment-orders",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "chPaymentOrderParamBean.amount",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.branchCode",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.cbiResult",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.creditorBankId",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.creditorIban",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.creditorIdentificationId",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.creditorShahabCode",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.debtorBankId",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.debtorIban",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.debtorIdentificationId",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.debtorShahabCode",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.fromAmount",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.fromSubmitTime",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.id",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.messageId",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.name",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.page",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.paymentCode",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.persianWorkingDate",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.ppName",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.remittanceInformationStructured",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.remittanceInformationUnstructured",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.reversed",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.sendToCbiTime",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.settledDateTime",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.size",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.statusCode",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.submitTime",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.toAmount",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.toSubmitTime",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.trackingCode",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "chPaymentOrderParamBean.transactionId",
+              "value": "null",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "transfer-ach",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/transfers/ach",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "sourceAccount",
+              "value": "YOUR_ACCOUNT",
+              "type": "text"
+            },
+            {
+              "key": "iban",
+              "value": "IR000000000000000000000000",
+              "type": "text"
+            },
+            {
+              "key": "amount",
+              "value": "10000",
+              "type": "text"
+            },
+            {
+              "key": "passwordMode",
+              "value": "sms",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "YOUR_SMS_CODE",
+              "type": "text"
+            },
+            {
+              "key": "reason",
+              "value": "LMAP",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "transactions",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/transactions",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "balance-average",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/balances/average",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "fromDate",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "toDate",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "transaction",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/transactions/{{id}}",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "transfer-report",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/reports/transfers",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "cif",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "clientTrackingCode",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "destinationIbanNumber",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "destinationOwnerName",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "factorNumber",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "fromIssueDate",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "fromRegisterDate",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "fromTransactionAmount",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "length",
+              "value": "0",
+              "type": "text"
+            },
+            {
+              "key": "offset",
+              "value": "0",
+              "type": "text"
+            },
+            {
+              "key": "order",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "referenceId",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "sourceDepositIban",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "sourceDepositNumber",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "statusSet",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "toIssueDate",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "toRegisterDate",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "toTransactionAmount",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "transactionStatusSet",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "transferDescription",
+              "value": "null",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "receipts",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/receipts",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "fromDate",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "toDate",
+              "value": "YOUR_VALUE",
+              "type": "text"
+            },
+            {
+              "key": "pageNumber",
+              "value": "0",
+              "type": "text"
+            },
+            {
+              "key": "pageSize",
+              "value": "0",
+              "type": "text"
+            },
+            {
+              "key": "ReceiptKeyword",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "FromAmount",
+              "value": "null",
+              "type": "text"
+            },
+            {
+              "key": "ToAmount",
+              "value": "null",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "services",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/services",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "customer-cards",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/customer/cards",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "transfer-instant-fixed",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/transfers/fixed/instant",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "sourceAccount",
+              "value": "YOUR_ACCOUNT",
+              "type": "text"
+            },
+            {
+              "key": "iban",
+              "value": "IR000000000000000000000000",
+              "type": "text"
+            },
+            {
+              "key": "amount",
+              "value": "10000",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "YOUR_FIXED_TRANSFER_PASSWORD",
+              "type": "text"
+            },
+            {
+              "key": "reason",
+              "value": "LMAP",
+              "type": "text"
+            },
+            {
+              "key": "branchCode",
+              "value": "YOUR_BRANCH_CODE",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "transfer-iban-fixed",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/transfers/fixed/iban",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "sourceAccount",
+              "value": "YOUR_ACCOUNT",
+              "type": "text"
+            },
+            {
+              "key": "iban",
+              "value": "IR000000000000000000000000",
+              "type": "text"
+            },
+            {
+              "key": "amount",
+              "value": "10000",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "YOUR_FIXED_TRANSFER_PASSWORD",
+              "type": "text"
+            },
+            {
+              "key": "reason",
+              "value": "LMAP",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "transfer-instant-sms-request",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/transfers/sms/instant/otp",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "sourceAccount",
+              "value": "YOUR_ACCOUNT",
+              "type": "text"
+            },
+            {
+              "key": "iban",
+              "value": "IR000000000000000000000000",
+              "type": "text"
+            },
+            {
+              "key": "amount",
+              "value": "10000",
+              "type": "text"
+            },
+            {
+              "key": "customerNumber",
+              "value": "YOUR_CUSTOMER_NUMBER",
+              "type": "text"
+            },
+            {
+              "key": "username",
+              "value": "YOUR_USERNAME",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "transfer-instant-sms",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/transfers/sms/instant",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "sourceAccount",
+              "value": "YOUR_ACCOUNT",
+              "type": "text"
+            },
+            {
+              "key": "iban",
+              "value": "IR000000000000000000000000",
+              "type": "text"
+            },
+            {
+              "key": "amount",
+              "value": "10000",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "YOUR_SMS_CODE",
+              "type": "text"
+            },
+            {
+              "key": "reason",
+              "value": "LMAP",
+              "type": "text"
+            },
+            {
+              "key": "branchCode",
+              "value": "YOUR_BRANCH_CODE",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "transfer-iban-sms-request",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/transfers/sms/iban/otp",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "sourceAccount",
+              "value": "YOUR_ACCOUNT",
+              "type": "text"
+            },
+            {
+              "key": "iban",
+              "value": "IR000000000000000000000000",
+              "type": "text"
+            },
+            {
+              "key": "amount",
+              "value": "10000",
+              "type": "text"
+            },
+            {
+              "key": "customerNumber",
+              "value": "YOUR_CUSTOMER_NUMBER",
+              "type": "text"
+            },
+            {
+              "key": "username",
+              "value": "YOUR_USERNAME",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "transfer-iban-sms",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/transfers/sms/iban",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "sourceAccount",
+              "value": "YOUR_ACCOUNT",
+              "type": "text"
+            },
+            {
+              "key": "iban",
+              "value": "IR000000000000000000000000",
+              "type": "text"
+            },
+            {
+              "key": "amount",
+              "value": "10000",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "YOUR_SMS_CODE",
+              "type": "text"
+            },
+            {
+              "key": "reason",
+              "value": "LMAP",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "pol",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/pol",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "from",
+              "value": "YOUR_ACCOUNT",
+              "type": "text"
+            },
+            {
+              "key": "to",
+              "value": "IR000000000000000000000000",
+              "type": "text"
+            },
+            {
+              "key": "amount",
+              "value": "10000",
+              "type": "text"
+            },
+            {
+              "key": "pass",
+              "value": "YOUR_FIXED_TRANSFER_PASSWORD",
+              "type": "text"
+            },
+            {
+              "key": "reason",
+              "value": "LMAP",
+              "type": "text"
+            },
+            {
+              "key": "branch",
+              "value": "YOUR_BRANCH_CODE",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "sheba",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/sheba",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "from",
+              "value": "YOUR_ACCOUNT",
+              "type": "text"
+            },
+            {
+              "key": "to",
+              "value": "IR000000000000000000000000",
+              "type": "text"
+            },
+            {
+              "key": "amount",
+              "value": "10000",
+              "type": "text"
+            },
+            {
+              "key": "pass",
+              "value": "YOUR_FIXED_TRANSFER_PASSWORD",
+              "type": "text"
+            },
+            {
+              "key": "reason",
+              "value": "LMAP",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "pol-sms",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/pol/sms",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "from",
+              "value": "YOUR_ACCOUNT",
+              "type": "text"
+            },
+            {
+              "key": "to",
+              "value": "IR000000000000000000000000",
+              "type": "text"
+            },
+            {
+              "key": "amount",
+              "value": "10000",
+              "type": "text"
+            },
+            {
+              "key": "pass",
+              "value": "YOUR_SMS_CODE",
+              "type": "text"
+            },
+            {
+              "key": "reason",
+              "value": "LMAP",
+              "type": "text"
+            },
+            {
+              "key": "branch",
+              "value": "YOUR_BRANCH_CODE",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "sheba-sms",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/sheba/sms",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "from",
+              "value": "YOUR_ACCOUNT",
+              "type": "text"
+            },
+            {
+              "key": "to",
+              "value": "IR000000000000000000000000",
+              "type": "text"
+            },
+            {
+              "key": "amount",
+              "value": "10000",
+              "type": "text"
+            },
+            {
+              "key": "pass",
+              "value": "YOUR_SMS_CODE",
+              "type": "text"
+            },
+            {
+              "key": "reason",
+              "value": "LMAP",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "pol-code",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/pol/code",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "from",
+              "value": "YOUR_ACCOUNT",
+              "type": "text"
+            },
+            {
+              "key": "to",
+              "value": "IR000000000000000000000000",
+              "type": "text"
+            },
+            {
+              "key": "amount",
+              "value": "10000",
+              "type": "text"
+            },
+            {
+              "key": "customer",
+              "value": "YOUR_CUSTOMER_NUMBER",
+              "type": "text"
+            },
+            {
+              "key": "user",
+              "value": "YOUR_USERNAME",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "sheba-code",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/sheba/code",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "from",
+              "value": "YOUR_ACCOUNT",
+              "type": "text"
+            },
+            {
+              "key": "to",
+              "value": "IR000000000000000000000000",
+              "type": "text"
+            },
+            {
+              "key": "amount",
+              "value": "10000",
+              "type": "text"
+            },
+            {
+              "key": "customer",
+              "value": "YOUR_CUSTOMER_NUMBER",
+              "type": "text"
+            },
+            {
+              "key": "user",
+              "value": "YOUR_USERNAME",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "status",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/auth/session",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "check-session",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/auth/session/check",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        }
+      }
+    },
+    {
+      "name": "ensure-session",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/auth/session/ensure",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        }
+      }
+    },
+    {
+      "name": "logout",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/auth/logout",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        }
+      }
+    },
+    {
+      "name": "deposits",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/deposits",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "cards-all",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/cards/all",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "deposits-all",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/deposits/all",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "balance",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/balance",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "balance-cards",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/balances/cards",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "balance-deposits",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/balances/deposits",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "transactions-latest",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/transactions/latest",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "transaction-find",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/transactions/find/{{code}}",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "health",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/health",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ]
+      }
+    }
+  ]
+}
