@@ -7,8 +7,8 @@
 [English](README.md) · [فارسی](README.fa.md) · [Documentation](https://apibank.vcpu.tech/parsian/) · [Python guide](python/README.md)
 
 [![CI](https://github.com/DevURANIUM/parsian-api/actions/workflows/ci.yml/badge.svg)](https://github.com/DevURANIUM/parsian-api/actions/workflows/ci.yml)
-[![PyPI](https://img.shields.io/pypi/v/parsian-api)](https://pypi.org/project/parsian-api/)
-[![Python](https://img.shields.io/pypi/pyversions/parsian-api)](https://pypi.org/project/parsian-api/)
+[![PyPI](https://img.shields.io/pypi/v/parsian-api?cacheSeconds=300&release=0.1.1)](https://pypi.org/project/parsian-api/)
+[![Python](https://img.shields.io/pypi/pyversions/parsian-api?cacheSeconds=300&release=0.1.1)](https://pypi.org/project/parsian-api/)
 [![MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 Read deposits, cards, balances, statements and receipts, or integrate card, POL/instant and IBAN/PAYA transfers through **76 documented local operations**. Fixed-password and SMS-code transfers have separate commands and API routes.
