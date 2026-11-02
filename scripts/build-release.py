@@ -58,7 +58,7 @@ def prepare(captures:list[str])->Path:
         for secret in secrets:
             if re.search(r'(?<!\w)'+re.escape(secret)+r'(?!\w)',text):raise RuntimeError('Captured private value rejected in '+str(relative))
         target=destination/relative;target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(source,target)
-    actual={p.relative_to(destination) for p in destination.rglob('*') if p.is_file()}
+    actual={p.relative_to(destination) for p in destination.rglob('*') if p.is_file() and '.git' not in p.relative_to(destination).parts}
     if actual!=paths:raise RuntimeError('Unexpected existing files in publication directory; inspect manually')
     manifest={str(p).replace('\\','/'):hashlib.sha256((destination/p).read_bytes()).hexdigest() for p in sorted(paths)}
     (ROOT/'release'/'SOURCE-SHA256.json').write_text(json.dumps(manifest,indent=2)+'\n')
