@@ -2,7 +2,7 @@
 
 این راهنما برای مخزن https://github.com/DevURANIUM/parsian-api آماده شده است.
 سورس Node و Python در یک مخزن قرار می‌گیرند؛ بسته PyPI فقط کتابخانه پایتون را نصب می‌کند.
-نسخه اولیه Python برابر 0.1.0 است و مستقل از نسخه سرویس 0.5.0 منتشر می‌شود.
+نسخه اولیه Python برابر 0.1.1 است و مستقل از نسخه سرویس 0.5.0 منتشر می‌شود.
 
 ## تنظیمات Trusted Publisher
 
@@ -62,10 +62,10 @@ python -m twine check python/dist/*
 
 ## انتشار اولیه PyPI
 
-بعد از سبز شدن CI و ذخیره تنظیمات Trusted Publisher، در GitHub وارد Actions شوید، Publish parsian-api to PyPI را انتخاب کنید و Run workflow را بزنید. شاخه main و version=0.1.0 را انتخاب کنید. تگ لازم نیست. با GitHub CLI هم می‌توانید اجرا کنید:
+بعد از سبز شدن CI و ذخیره تنظیمات Trusted Publisher، در GitHub وارد Actions شوید، Publish parsian-api to PyPI را انتخاب کنید و Run workflow را بزنید. شاخه main و version=0.1.1 را انتخاب کنید. تگ لازم نیست. با GitHub CLI هم می‌توانید اجرا کنید:
 
 ```powershell
-gh workflow run workflow.yml --ref main -f version=0.1.0
+gh workflow run workflow.yml --ref main -f version=0.1.1
 ```
 
 Action با نام Publish parsian-api to PyPI اجرا می‌شود: تست Node و Python، کنترل نسخه انتخاب‌شده، ساخت بسته، کنترل metadata و سپس انتشار از environment=pypi.

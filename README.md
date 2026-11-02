@@ -252,6 +252,8 @@ cli.js / transfer*.js / shortcuts.js      Standalone CLI and transfers
 data/endpoints.json                      Sanitized bank schemas only
 local-openapi.json                        Local service contract
 python/                                  PyPI package, tests and examples
+docs/guides/                             API, CLI and transfer guides
+docs/PUBLISH.fa.md                       GitHub and PyPI publishing instructions
 .github/workflows/ci.yml                  Test matrix
 .github/workflows/workflow.yml            Manual PyPI publishing
 ```
@@ -270,6 +272,6 @@ python -m build python
 python -m twine check python/dist/*
 ```
 
-The initial distribution is `parsian-api==0.1.0`. Follow [publication instructions](docs/PUBLISH.fa.md) for the GitHub upload and exact PyPI Trusted Publisher fields. Run the publishing workflow manually from Actions on `main`, enter the package version (initially `0.1.0`), and use the GitHub environment `pypi`. No tag is required.
+The current distribution is `parsian-api==0.1.1`. Follow [publication instructions](docs/PUBLISH.fa.md) for the GitHub upload and exact PyPI Trusted Publisher fields. Run the publishing workflow manually from Actions on `main`, enter the package version (`0.1.1`), and use the GitHub environment `pypi`. No tag is required.
 
 See [CONTRIBUTING](CONTRIBUTING.md), [security notes](SECURITY.md), [changelog](CHANGELOG.md) and [MIT license](LICENSE).
