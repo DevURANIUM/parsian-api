@@ -62,14 +62,13 @@ python -m twine check python/dist/*
 
 ## انتشار اولیه PyPI
 
-بعد از سبز شدن CI و ذخیره تنظیمات Trusted Publisher:
+بعد از سبز شدن CI و ذخیره تنظیمات Trusted Publisher، در GitHub وارد Actions شوید، Publish parsian-api to PyPI را انتخاب کنید و Run workflow را بزنید. شاخه main و version=0.1.0 را انتخاب کنید. تگ لازم نیست. با GitHub CLI هم می‌توانید اجرا کنید:
 
 ```powershell
-git tag python-v0.1.0
-git push origin python-v0.1.0
+gh workflow run workflow.yml --ref main -f version=0.1.0
 ```
 
-Action با نام Publish parsian-api to PyPI اجرا می‌شود: تست Node و Python، کنترل نسخه tag، ساخت بسته، کنترل metadata و سپس انتشار از environment=pypi.
+Action با نام Publish parsian-api to PyPI اجرا می‌شود: تست Node و Python، کنترل نسخه انتخاب‌شده، ساخت بسته، کنترل metadata و سپس انتشار از environment=pypi.
 پس از موفق شدن مرحله publish:
 
 ```powershell
@@ -81,8 +80,8 @@ parsian-api --help
 
 ## انتشار بعدی
 
-نسخه را در python/pyproject.toml و python/src/parsianapi/__init__.py بالا ببرید؛ بسته و تست‌ها را بازسازی کنید، commit و push کنید، سپس tag تازه‌ای مثل python-v0.1.1 بسازید.
-PyPI نسخه قبلی را بازنویسی نمی‌کند؛ tagها و فایل‌های نسخه منتشرشده را force نکنید.
+نسخه را در python/pyproject.toml و python/src/parsianapi/__init__.py بالا ببرید؛ بسته و تست‌ها را بازسازی کنید، commit و push کنید، سپس Run workflow را با همان نسخه جدید اجرا کنید.
+PyPI نسخه قبلی را بازنویسی نمی‌کند؛ برای هر انتشار، نسخه تازه‌ای انتخاب کنید.
 
 اگر خطای trusted publisher گرفتید، owner، repository، workflow.yml و environment=pypi باید دقیقاً با فرم PyPI یکی باشند.
 اگر environment در GitHub نیاز به تأیید دارد، انتشار تا تأیید خودتان منتظر می‌ماند.

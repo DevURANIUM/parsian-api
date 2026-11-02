@@ -253,7 +253,7 @@ data/endpoints.json                      Sanitized bank schemas only
 local-openapi.json                        Local service contract
 python/                                  PyPI package, tests and examples
 .github/workflows/ci.yml                  Test matrix
-.github/workflows/workflow.yml            Tagged PyPI publishing
+.github/workflows/workflow.yml            Manual PyPI publishing
 ```
 
 No captured bank traffic, personal accounts, sessions or populated `.env` is distributed. Public schemas describe observations; they are not an official bank specification. Financial behavior is tested with a simulated bank, not with new live payments.
@@ -270,6 +270,6 @@ python -m build python
 python -m twine check python/dist/*
 ```
 
-The initial distribution is `parsian-api==0.1.0`. Follow [publication instructions](docs/PUBLISH.fa.md) for the GitHub upload and exact PyPI Trusted Publisher fields. The publishing workflow expects a `python-v0.1.0` tag and the GitHub environment `pypi`.
+The initial distribution is `parsian-api==0.1.0`. Follow [publication instructions](docs/PUBLISH.fa.md) for the GitHub upload and exact PyPI Trusted Publisher fields. Run the publishing workflow manually from Actions on `main`, enter the package version (initially `0.1.0`), and use the GitHub environment `pypi`. No tag is required.
 
 See [CONTRIBUTING](CONTRIBUTING.md), [security notes](SECURITY.md), [changelog](CHANGELOG.md) and [MIT license](LICENSE).
