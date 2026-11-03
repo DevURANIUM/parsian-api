@@ -161,7 +161,7 @@ curl.exe http://127.0.0.1:3101/v1/accounts -H "x-api-key: YOUR_SERVICE_KEY"
 
 خارج localhost کلید لازم است؛ اتصال راه دور را با HTTPS محافظت کنید.
 
-## توسعه و انتشار
+## توسعه
 
 ```powershell
 npm ci
@@ -174,4 +174,4 @@ python -m twine check python/dist/*
 
 تست‌های مالی شبیه‌سازی‌شده‌اند و پول یا پیامک واقعی ارسال نمی‌کنند. بسته wheel فقط SDK پایتون است؛ سورس GitHub هر دو بخش Node و Python را دارد.
 
-[راهنمای انتشار](docs/PUBLISH.fa.md) · [مرجع API](local-openapi.json) · [مشارکت](CONTRIBUTING.md) · [MIT](LICENSE)
+[مرجع API](local-openapi.json) · [مشارکت](CONTRIBUTING.md) · [MIT](LICENSE)
